@@ -42,4 +42,7 @@
   <remove-project name="device/lge/mako-kernel" />
   <remove-project name="device/moto/shamu-kernel" />
   <remove-project name="device/htc/flounder-kernel" />
+
+  <!-- changes for bluez -->
+  <include name="bluez.xml" />
 </manifest>
