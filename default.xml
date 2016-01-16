@@ -44,5 +44,13 @@
   <remove-project name="device/htc/flounder-kernel" />
 
   <!-- changes for bluez -->
-  <include name="bluez.xml" />
+  <remote  name="bluez-github" fetch="https://github.com/bluez-android/" />
+  <remote name="korg" fetch="git://git.kernel.org/pub/scm/bluetooth/"/>
+  <remote name="gcode" fetch="https://code.google.com/p/"/>
+
+  <remove-project name="platform/external/bluetooth/bluedroid" />
+  <project remote="korg" path="external/bluetooth/bluez" name="bluez" group="pdk" revision="master"/>
+  <project remote="korg" path="external/bluetooth/sbc" name="sbc" group="pdk" revision="master"/>
+  <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
+
 </manifest>
